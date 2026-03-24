@@ -1,69 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishitha | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishitha | Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f4f4f4;
-        }
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
+}
 
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+header {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
 
-        section {
-            padding: 20px;
-        }
+nav {
+    display: flex;
+    background: #333;
+}
 
-        .card {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-    </style>
+nav button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #555;
+}
+
+.active {
+    background: #007bff !important;
+}
+
+.tab {
+    display: none;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Rishitha</h1>
-    <p>Aspiring Product Manager | DevOps Enthusiast</p>
+    <h1>Rishitha Dadireddy</h1>
 </header>
 
-<section>
-    <div class="card">
-        <h2>About Me</h2>
-        <p>I am transitioning from DevOps to Product Management...</p>
-    </div>
+<nav>
+    <button onclick="openTab('home')" class="active">Home</button>
+    <button onclick="openTab('summary')">Summary</button>
+    <button onclick="openTab('skills')">Skills</button>
+    <button onclick="openTab('experience')">Experience</button>
+    <button onclick="openTab('projects')">Projects</button>
+    <button onclick="openTab('education')">Education</button>
+    <button onclick="openTab('contact')">Contact</button>
+</nav>
 
+<!-- HOME -->
+<div id="home" class="tab" style="display:block;">
     <div class="card">
-        <h2>Skills</h2>
+        <h2>Welcome</h2>
+        <p class="highlight">Cloud DevOps Engineer</p>
+        <p><strong>Name:</strong> Rishitha Dadireddy</p>
+        <p><strong>Location:</strong> Hyderabad</p>
+        <p><strong>Email:</strong> rishithareddy2707@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9490188125</p>
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div id="summary" class="tab">
+    <div class="card">
+        <h2>Summary</h2>
+        <p>
+        Analytical and results-driven Cloud DevOps Engineer with 1 year of experience managing AWS infrastructure.
+        Skilled in automation, problem-solving, and incident resolution. Focused on improving scalability,
+        deployment efficiency, and system reliability.
+        </p>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="tab">
+    <div class="card">
+        <h2>Technical Skills</h2>
         <ul>
-            <li>Linux</li>
-            <li>Docker</li>
-            <li>AWS</li>
-            <li>Ansible</li>
+            <li><strong>Cloud:</strong> AWS (EC2, VPC, IAM, S3, RDS, EBS, EFS, Auto Scaling, ALB, Route 53)</li>
+            <li><strong>DevOps Tools:</strong> Terraform, Ansible, Jenkins, GitHub Actions, Git</li>
+            <li><strong>Containers:</strong> Docker</li>
+            <li><strong>Orchestration:</strong> Kubernetes</li>
+            <li><strong>OS:</strong> Linux (Ubuntu, Amazon Linux)</li>
+            <li><strong>Scripting:</strong> Bash, Python (basic)</li>
+            <li><strong>Web Servers:</strong> Nginx, Apache</li>
+            <li><strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch</li>
         </ul>
     </div>
+</div>
 
+<!-- EXPERIENCE -->
+<div id="experience" class="tab">
+    <div class="card">
+        <h2>Professional Experience</h2>
+        <h3>Cloud DevOps Engineer</h3>
+        <p><strong>AJA Coding Tutor | Feb 2024 – Present</strong></p>
+        <ul>
+            <li>Managed AWS production infrastructure ensuring high availability</li>
+            <li>Reduced manual effort by 70% using Terraform</li>
+            <li>Automated deployments using Ansible</li>
+            <li>Built CI/CD pipelines using Jenkins & GitHub Actions</li>
+            <li>Maintained 99.9% uptime with Load Balancers & Auto Scaling</li>
+            <li>Handled production incidents and RCA</li>
+        </ul>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="tab">
     <div class="card">
         <h2>Projects</h2>
-        <p>Cafeteria App using credit points system</p>
-    </div>
 
+        <h3>RedeemX App</h3>
+        <ul>
+            <li>Designed multi-AZ VPC architecture</li>
+            <li>Implemented secure networking (NAT, IGW, Security Groups)</li>
+            <li>Deployed EC2 with ALB & Auto Scaling</li>
+            <li>Used RDS Multi-AZ for fault tolerance</li>
+            <li>CI/CD + Docker integration</li>
+        </ul>
+
+        <h3>CTIP Website</h3>
+        <ul>
+            <li>Highly available EC2 architecture</li>
+            <li>Nginx reverse proxy with HTTPS</li>
+            <li>CI/CD using Jenkins</li>
+            <li>Linux hardening & performance tuning</li>
+        </ul>
+    </div>
+</div>
+
+<!-- EDUCATION -->
+<div id="education" class="tab">
+    <div class="card">
+        <h2>Education</h2>
+        <p>M.A Economics</p>
+        <p>Jain University, Bengaluru (2021 - 2023)</p>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="tab">
     <div class="card">
         <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
+        <p>Email: rishithareddy2707@gmail.com</p>
+        <p>Phone: +91 9490188125</p>
+        <p>
+            LinkedIn: 
+            <a href="http://www.linkedin.com/in/rishitha-reddy-dadireddy-5b730121b" target="_blank">
+                View Profile
+            </a>
+        </p>
     </div>
-</section>
+</div>
+
+<script>
+function openTab(tabName) {
+    let tabs = document.getElementsByClassName("tab");
+    let buttons = document.querySelectorAll("nav button");
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tabName).style.display = "block";
+    event.target.classList.add("active");
+}
+</script>
 
 </body>
 </html>
